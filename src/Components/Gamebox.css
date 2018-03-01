@@ -1,0 +1,10 @@
+.gamebox-container {
+  width:25em;
+  margin:0 auto;
+  border-radius:6px;
+}
+
+.purple-body {
+  height:15em;
+  background-color:#394264;
+}

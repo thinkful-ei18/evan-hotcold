@@ -1,0 +1,36 @@
+form {
+  height:8em;
+  padding:10px;
+}
+
+form input {
+  display:block;
+  text-align:center;
+  margin:0 auto;
+  /* height:em; */
+  font-size:1.8em;
+  border-radius:4px;
+  background-color:#50597B;
+  border:1px solid black;
+  padding:5px;
+  width:10em;
+  margin-top:10px;
+  height:1.4em;
+}
+
+form input::placeholder {
+  color:#95A59C;
+}
+
+form button {
+  font-size:1.8em;
+  border:none;
+  width:10em;
+  display:block;
+  margin:0 auto;
+  border-radius:4px;
+  padding:5px;
+  color:#95A59C;
+  height:2em;
+  background-color:#1F253D;
+}

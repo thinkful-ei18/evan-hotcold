@@ -1,0 +1,28 @@
+h1 {
+  color:white;
+  font-weight: bolder;
+  font-size:3em;
+}
+
+
+nav {
+  display:flex;
+  flex-direction:row;
+  color:white;
+  font-weight:bolder;
+  text-transform:uppercase;
+}
+
+.description {
+  margin-left:10px;
+  margin-right:auto;
+}
+
+.new-game {
+  margin-right:10px;
+  margin-left:auto;
+}
+
+h1 {
+  text-align:center;
+}
