@@ -3,7 +3,7 @@ import '../Components/Hintbox.css';
 
 function Hintbox (props) {
   return (
-    <h2>Make Your Guess!</h2>
+    <h2>{props.feedback}</h2>
   )
 
 }

@@ -8,10 +8,10 @@ function Gamebox (props) {
   return (
     <main>
       <section className='gamebox-container'>
-        <Hintbox/>
+        <Hintbox feedback={props.feedback}/>
         <div className='purple-body'>
-          <GuessSubmit />
-          <Statbox />
+          <GuessSubmit onSubmit={(e) => props.onSubmit(e)}/>
+          <Statbox guessArray={props.guessArray} />
         </div>
       </section>
     </main>

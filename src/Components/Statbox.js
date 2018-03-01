@@ -1,33 +1,24 @@
 import React from 'react';
 import '../Components/Statbox.css';
+import GuessButton from './GuessButton';
 
 export default class Statbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      guesses:0,
-      greeting: 'Wow you\'re AWFUL!!!'
-    };
-  }
 
-  sayHi = () => {
-    this.setState({
-      guesses: this.state.guesses + 1
-    });
-  };
 
-  
 
   render() {
+    const guessArray = this.props.guessArray;
+    const buttons = guessArray.map((guessnum,index) => {
+      return <GuessButton guessNumber={guessnum} key={index} />
+    })
     return (
       <div className='statBox'>
         <div className='guess-stats-container'>
-        <p onClick = {this.sayHi} className='guess-stats-text'>Guess #</p>
-        <div className='guess-stats-number'>{this.state.guesses}</div>
+        <p className='guess-stats-text'>Guess#{this.props.guessnumber}</p>
+        <div className='guess-stats-number'></div>
         </div>
         <div className='performance-stats'>
-          {this.state.guesses >= 10 ? this.state.greeting : ''}
-          <ul></ul>
+          <ul className='guess-button-container'>{buttons}</ul>
         </div>
       </div>
     )
