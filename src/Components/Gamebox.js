@@ -11,7 +11,7 @@ function Gamebox (props) {
         <Hintbox feedback={props.feedback}/>
         <div className='purple-body'>
           <GuessSubmit onSubmit={(e) => props.onSubmit(e)}/>
-          <Statbox guessArray={props.guessArray} />
+          <Statbox guessnumber={props.guessnumber}guessArray={props.guessArray} />
         </div>
       </section>
     </main>

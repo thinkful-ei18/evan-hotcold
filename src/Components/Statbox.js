@@ -8,14 +8,14 @@ export default class Statbox extends React.Component {
 
   render() {
     const guessArray = this.props.guessArray;
-    const buttons = guessArray.map((guessnum,index) => {
-      return <GuessButton guessNumber={guessnum} key={index} />
+    const buttons = guessArray.map((guessednum,index) => {
+      return <GuessButton guessednumber={guessednum} key={index} />
     })
     return (
       <div className='statBox'>
         <div className='guess-stats-container'>
-        <p className='guess-stats-text'>Guess#{this.props.guessnumber}</p>
-        <div className='guess-stats-number'></div>
+        <p className='guess-stats-text'>Guess#</p>
+        <div className='guess-stats-number'>{this.props.guessnumber}</div>
         </div>
         <div className='performance-stats'>
           <ul className='guess-button-container'>{buttons}</ul>

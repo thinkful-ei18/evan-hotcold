@@ -6,8 +6,8 @@ function Header (props) {
 
     <header>
       <nav>
-        <h3 className='description'>What?</h3>
-        <h3 className='new-game'>+New Game</h3>
+        <h3 onClick={() => props.toggleModal()}className='description'>What?</h3>
+        <h3 onClick = {() => props.resetGame()}className='new-game'>+New Game</h3>
         </nav>
       <h1> HOT or COLD!</h1>
     </header>
