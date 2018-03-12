@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Components/Header.css'
+import {connect} from 'react-redux';
 
 function Header (props) {
   return (
@@ -16,4 +17,5 @@ function Header (props) {
 
 }
 
-export default Header;
+
+export default connect(Header);

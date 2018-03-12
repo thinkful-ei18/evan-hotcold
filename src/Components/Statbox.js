@@ -1,13 +1,12 @@
 import React from 'react';
 import '../Components/Statbox.css';
 import GuessButton from './GuessButton';
+import {connect} from 'react-redux';
 
-export default class Statbox extends React.Component {
-
-
+export class Statbox extends React.Component {
 
   render() {
-    const guessArray = this.props.guessArray;
+    const guessArray = this.props.userguesses;
     const buttons = guessArray.map((guessednum,index) => {
       return <GuessButton guessednumber={guessednum} key={index} />
     })
@@ -24,3 +23,14 @@ export default class Statbox extends React.Component {
     )
   }
 };
+
+
+
+const mapStateToProps = state => {
+  return {
+  userguesses:state.userguesses,
+  guessnumber:state.userguesses[state.userguesses.length -1]
+  }
+}
+
+export default connect(mapStateToProps)(Statbox);

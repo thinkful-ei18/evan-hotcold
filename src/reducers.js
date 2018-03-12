@@ -27,7 +27,6 @@ export default (state = initialState, action) => {
 
           } else {
             return Object.assign({}, state, {feedback:'freezing'});
-
           }
     }
     
@@ -44,5 +43,5 @@ export default (state = initialState, action) => {
     if (action.type === TOGGLE_MODAL) {
         return Object.assign({}, state, {displayModal: !state.displayModal});
     }
-
+    return state;
 }

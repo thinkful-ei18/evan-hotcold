@@ -4,17 +4,17 @@ export const setFeedback = () => ({
 })
 
 export const ADD_GUESS = 'ADD_GUESS';
-export const addGuess = (guess) => {
+export const addGuess = (guess) =>({
     type:ADD_GUESS,
     guess
-}
+})
 
 export const RESET_GAME = 'RESET_GAME'
-export const resetGame = () => {
+export const resetGame = () => ({
     type:RESET_GAME
-}
+})
 
 export const TOGGLE_MODAL = 'TOGGLE_MODAL'
-export const toggleModal = () => {
+export const toggleModal = () => ({
     
-}
+})
